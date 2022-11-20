@@ -22,8 +22,7 @@ def creating_places_geojson(request):
             "properties": {
                 "title": place.title,
                 "placeId": place.id,
-                # "detailsUrl": reverse('place_by_id', args=[place.id])
-                "detailsUrl": ''
+                "detailsUrl": reverse('place_by_id', args=[place.id])
             }
         })
     places_geojson = {
