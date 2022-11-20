@@ -1,0 +1,4 @@
+Django==4.1.3
+django_admin_sortable2==2.1.4
+django_tinymce==3.5.0
+environs==9.5.0
