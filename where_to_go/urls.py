@@ -18,6 +18,7 @@ from django.urls import path
 from django.shortcuts import render
 from django.conf.urls.static import static
 from django.conf import settings
+from places.views import creating_places_geojson, get_place_by_id
 
 def index(request):
     context = {}
@@ -26,5 +27,6 @@ def index(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index)
+    path('', creating_places_geojson),
+    path('places/<int:place_id>', get_place_by_id, name='place_by_id')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
