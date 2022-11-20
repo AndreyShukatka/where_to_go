@@ -25,7 +25,7 @@ class Image(models.Model):
     image = models.ImageField(
         verbose_name='Картинка',
         blank=True,
-        upload_to=''
+        upload_to='images'
     )
     position = models.IntegerField(
         default=0,
