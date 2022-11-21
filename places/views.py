@@ -10,11 +10,11 @@ from django.conf import settings
 
 
 # Create your views here.
-def creating_places_geojson(request):
-    places_coordinates = []
+def creating_place_params(request):
+    places_params = []
     places = Place.objects.all()
     for place in places:
-        places_coordinates.append({
+        places_params.append({
             'type': 'Feature',
             'geometry': {
                 'type': 'Point',
@@ -28,7 +28,7 @@ def creating_places_geojson(request):
         })
     places_geojson = {
         'type': 'FeatureCollection',
-        'features': places_coordinates
+        'features': places_params
     }
     context = {
         'places_geojson': places_geojson
