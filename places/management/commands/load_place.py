@@ -14,6 +14,7 @@ class Command(BaseCommand):
                             default=False,
                             help='url адрес джейсона'
                             )
+
     def handle(self, *args, **options):
         url = options['url']
         response = requests.get(url)
@@ -34,7 +35,6 @@ class Command(BaseCommand):
             lat=lat
         )
         self.download_images(images, place)
-
 
     def download_images(self, images, place):
         for number, image in enumerate(images):
