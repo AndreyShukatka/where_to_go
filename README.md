@@ -2,7 +2,7 @@
 
 Авторский проект Артёма.
 
-![&#x41A;&#x443;&#x434;&#x430; &#x43F;&#x43E;&#x439;&#x442;&#x438;](.gitbook/assets/site.png)
+![&#x41A;&#x443;&#x434;&#x430; &#x43F;&#x43E;&#x439;&#x442;&#x438;](https://github.com/MaksAnikeev/where_to_go/blob/main/.gitbook/assets/site.png)
 
 [Пример работы сайта](http://slon1k.pythonanywhere.com).
 
@@ -49,7 +49,7 @@ python manage.py runserver
 
 Внизу справа на странице можно включить отладочный режим логгирования.
 
-![debug mode](.gitbook/assets/debug-option.png)
+![debug mode](https://github.com/MaksAnikeev/where_to_go/blob/main/.gitbook/assets/debug-option.png)
 
 Настройки сохраняются в Local Storage браузера и не пропадают после обновления страницы. Чтобы сбросить настройки удалите ключи из Local Storage с помощью Chrome Dev Tools —&gt; Вкладка Application —&gt; Local Storage.
 
