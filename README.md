@@ -4,7 +4,7 @@
 
 ![&#x41A;&#x443;&#x434;&#x430; &#x43F;&#x43E;&#x439;&#x442;&#x438;](.gitbook/assets/site.png)
 
-[Пример работы сайта]().
+[Пример работы сайта](http://slon1k.pythonanywhere.com).
 
 ## Запуск
 
@@ -65,9 +65,9 @@ python manage.py createsuperuser
 
 `http://127.0.0.1:8000/admin/`
 
-Либо, если вы смотрите пример работы сайта:
+Либо, если вы смотрите пример работы админки сайта:
 
-`Вставить свою админку при развертке`
+`http://slon1k.pythonanywhere.com/admin`
 
 Текущее имя - `admin`, пароль - `admin`
 
