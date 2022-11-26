@@ -22,12 +22,11 @@ def creating_place_params(request):
                 'detailsUrl': reverse('place_by_id', args=[place.id])
             }
         })
-    geo = {
-        'type': 'FeatureCollection',
-        'features': features
-    }
     context = {
-        'places_geojson': geo
+        'places_geojson': {
+            'type': 'FeatureCollection',
+            'features': features
+        }
     }
     return render(request, 'index.html', context)
 
