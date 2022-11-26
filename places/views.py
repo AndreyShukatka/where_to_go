@@ -6,7 +6,7 @@ from django.urls import reverse
 
 
 # Create your views here.
-def creating_place_params(request):
+def get_place(request):
     features = []
     places = Place.objects.all()
     for place in places:

@@ -18,7 +18,7 @@ from django.urls import path
 from django.shortcuts import render
 from django.conf.urls.static import static
 from django.conf import settings
-from places.views import creating_place_params, get_place_by_id
+from places.views import get_place, get_place_by_id
 
 def index(request):
     context = {}
@@ -27,6 +27,6 @@ def index(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', creating_place_params),
+    path('', get_place),
     path('places/<int:place_id>', get_place_by_id, name='place_by_id')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
