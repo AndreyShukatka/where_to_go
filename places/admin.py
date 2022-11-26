@@ -12,8 +12,7 @@ class ImageInLine(SortableInlineAdminMixin, admin.TabularInline):
     fields = ('image', 'get_preview', 'position')
 
     def get_preview(self, instance: Image):
-        image = instance.image
-        return format_html('<img src="{url}" height=200px/>', url=image.url)
+        return format_html('<img src="{url}" height=200px/>', url=instance.image.url)
 
 
 @admin.register(Place)
