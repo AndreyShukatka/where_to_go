@@ -36,6 +36,9 @@ class Command(BaseCommand):
                 'lng': lng,
             }
         )
+        if not created:
+            print(f'Object "{title}" already exist')
+            return
         self.download_images(images, place)
 
     def download_images(self, images, place):
