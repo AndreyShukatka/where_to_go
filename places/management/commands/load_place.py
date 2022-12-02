@@ -37,7 +37,6 @@ class Command(BaseCommand):
             }
         )
         if created:
-            print('a')
             self.download_images(images, place)
 
 
