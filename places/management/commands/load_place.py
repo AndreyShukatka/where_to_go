@@ -39,7 +39,6 @@ class Command(BaseCommand):
         if created:
             self.download_images(images, place)
 
-
     def download_images(self, images, place):
         for number, image in enumerate(images):
             image_response = requests.get(image)
