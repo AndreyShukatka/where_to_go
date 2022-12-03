@@ -25,7 +25,7 @@ class Command(BaseCommand):
         description_long = place_params.get('description_long', '')
         lng = place_params['coordinates']['lng']
         lat = place_params['coordinates']['lat']
-        images = place_params.get('imgs', '')
+        images = place_params.get('imgs', [])
 
         place, created = Place.objects.get_or_create(
             title=title,
