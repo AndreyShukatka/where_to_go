@@ -20,12 +20,12 @@ class Command(BaseCommand):
         response = requests.get(url)
         response.raise_for_status()
         place_params = response.json()
-        title = place_params.get('title')
+        title = place_params['title']
         description_short = place_params.get('description_short', '')
         description_long = place_params.get('description_long', '')
-        lng = place_params.get('coordinates').get('lng')
-        lat = place_params.get('coordinates').get('lat')
-        images = place_params.get('imgs')
+        lng = place_params['coordinates']['lng']
+        lat = place_params['coordinates']['lat']
+        images = place_params.get('imgs', '')
 
         place, created = Place.objects.get_or_create(
             title=title,
